@@ -4,6 +4,7 @@ import CostsTab     from "./components/tabs/CostsTab.jsx";
 import HeatmapTab   from "./components/tabs/HeatmapTab.jsx";
 import EVTab        from "./components/tabs/EVTab.jsx";
 import SeasonalTab  from "./components/tabs/SeasonalTab.jsx";
+import HotWaterTab  from "./components/tabs/HotWaterTab.jsx";
 import { M, PR }    from "./data/index.js";
 import { CL, monthLabel } from "./utils/index.js";
 
@@ -13,6 +14,7 @@ const TABS = [
   ['heatmap',  'Heatmap'],
   ['ev',       'EV charging'],
   ['seasonal', 'Seasonal'],
+  ['hotwater', 'Hot water'],
 ];
 
 export default function Dashboard() {
@@ -79,6 +81,7 @@ export default function Dashboard() {
       {tab === 'heatmap'   && <HeatmapTab   profileChart={profileChart}/>}
       {tab === 'ev'        && <EVTab        mChart={mChart}/>}
       {tab === 'seasonal'  && <SeasonalTab  mChart={mChart}/>}
+      {tab === 'hotwater'  && <HotWaterTab/>}
     </div>
   );
 }
